@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/displayLinearLayout"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="3dp"
+        android:padding="10dp"
+        app:cardUseCompatPadding="true"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:padding="10dp"
+
+                android:id="@+id/edit_food_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Food Name"
+                android:maxLines="1"
+                android:layout_marginTop="0dp"
+                android:textSize="25dp"
+                android:textStyle="italic|bold" />
+
+            <EditText
+                android:padding="10dp"
+                android:maxLines="2"
+                android:id="@+id/edit_text_sub_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Description"
+                android:layout_below="@+id/edit_food_cat"
+                android:textSize="25dp"
+                android:textStyle="italic|bold" />
+
+            <EditText
+
+                android:id="@+id/edit_text_price_subcat"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Enter Price"
+                android:layout_below="@id/edit_text_sub_cat"
+                android:textSize="25dp"
+                android:textStyle="italic|bold" />
+
+            <EditText
+
+                android:id="@+id/edit_text_price_discount"
+                android:inputType="number"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Discount"
+                android:layout_below="@id/edit_text_price_subcat"
+                android:textSize="25dp"
+                android:textStyle="italic|bold" />
+
+
+            <Button
+                android:layout_below="@id/edit_text_price_discount"
+                android:layout_width="match_parent"
+                android:background="@color/btnred"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/btnAddImage"
+                android:text="UPLOAD IMAGE"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    android:id="@+id/displayLinearLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="3dp"
+        app:cardBackgroundColor="#F5F5F5"
+        app:cardUseCompatPadding="true"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/order_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:scaleType="center"
+                android:textColor="#76FF03"
+                android:text="Name : "
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/order_name"
+                android:scaleType="center"
+
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+
+            <TextView
+                android:id="@+id/order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:scaleType="center"
+
+                android:textColor="#D84315"
+                android:layout_toRightOf="@id/order_product_name"
+                android:text="Contact : "
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_product_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/order_id"
+                android:scaleType="center"
+                android:text="870015660"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/order_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:scaleType="center"
+                android:text="Shipping Address :"
+                android:textColor="#6D4C41"
+                android:layout_below="@id/order_name"
+                android:textSize="8sp"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_product_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="-LXFYMFOMmtN2DKA1cvr"
+                android:scaleType="center"
+                android:layout_toEndOf="@id/order_address"
+                android:textAlignment="center"
+                android:layout_below="@id/order_product_name"
+                android:textSize="8sp"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+
+            <TextView
+                android:id="@+id/order_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:text=" City :"
+                android:textColor="#00E5FF"
+                android:layout_marginTop="0dp"
+                android:layout_below="@id/order_address"
+                android:textSize="8sp"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_product_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_toEndOf="@id/order_city"
+
+                android:text="Mhow"
+                android:layout_below="@id/order_product_address"
+                android:textSize="8sp"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_toRightOf="@id/order_product_city"
+                android:layout_below="@id/order_product_address"
+                android:text=" Country : "
+                android:textSize="8sp"
+               android:textColor="#3D5AFE"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_product_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_toEndOf="@id/order_country"
+                android:textStyle="italic|bold"
+                android:layout_below="@id/order_product_address"
+                android:textSize="8sp"
+                android:text="India"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:id="@+id/order_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_below="@id/order_product_city"
+                android:text=" Total Amount : Rs"
+                android:textSize="8sp"
+                android:textColor="#F50057"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_product_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_toEndOf="@id/order_amount"
+                android:layout_below="@id/order_product_country"
+                android:textSize="8sp"
+                android:text="100"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:id="@+id/order_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_toRightOf="@+id/order_product_amount"
+                android:layout_below="@id/order_product_city"
+                android:text="ORDER ID:"
+                android:textSize="8sp"
+                android:textColor="#EF6C00"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/order_product_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_toEndOf="@id/order_contact"
+                android:layout_below="@id/order_product_country"
+                android:textSize="8sp"
+                android:text="-LXGHkvxPlw0bvZwejCS"
+                android:padding="10dp"
+                android:textStyle="italic|bold" />
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
