@@ -43,7 +43,6 @@ public class SignIn extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
 
-        setContentView(R.layout.activity_sign_in);
 
 
 

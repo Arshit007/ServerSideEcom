@@ -53,6 +53,7 @@ public class AddSubCategoryActivity extends AppCompatActivity {
     RecyclerView recycler_sub_category;
     String subcatdiscount, subcatName, subcatdescription, subcatprice, CategoryName;
 
+
     Button btnAddImage;
     Intent intent;
     String CategoryId;

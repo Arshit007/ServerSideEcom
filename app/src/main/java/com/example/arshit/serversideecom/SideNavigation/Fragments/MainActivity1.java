@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.arshit.serversideecom.LogoutFragment;
 import com.example.arshit.serversideecom.MainActivity;
 import com.example.arshit.serversideecom.Model.Category;
 import com.example.arshit.serversideecom.R;
@@ -47,6 +48,7 @@ import com.example.arshit.serversideecom.SideNavigation.Fragments.Fragment.AllOr
 import com.example.arshit.serversideecom.SideNavigation.Fragments.Fragment.AllUserFragment;
 import com.example.arshit.serversideecom.SideNavigation.Fragments.Fragment.HomeFragment;
 import com.example.arshit.serversideecom.SideNavigation.Fragments.Notification.Token;
+import com.example.arshit.serversideecom.SignIn;
 import com.example.arshit.serversideecom.SubCategoryActivity;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -118,7 +120,7 @@ public class MainActivity1 extends AppCompatActivity {
     private static final String TAG_HOME = "home";
     private static final String TAG_PHOTOS = "ALL USER";
     private static final String TAG_MOVIES = "ALL ORDERS";
-    private static final String TAG_NOTIFICATIONS = "notifications";
+    private static final String TAG_Logout = "Logout";
     private static final String TAG_SETTINGS = "settings";
     public static String CURRENT_TAG = TAG_HOME;
     HashMap<String,String> hashMap;
@@ -427,10 +429,10 @@ hashMap = new HashMap<>();
                 // movies fragment
                 AllOrderFragment moviesFragment = new AllOrderFragment();
                 return moviesFragment;
-//            case 3:
-//                // notifications fragment
-//                NotificationsFragment notificationsFragment = new NotificationsFragment();
-//                return notificationsFragment;
+            case 3:
+                // notifications fragment
+                LogoutFragment notificationsFragment = new LogoutFragment();
+                return notificationsFragment;
 //
 //            case 4:
 //                // settings fragment
@@ -472,24 +474,24 @@ hashMap = new HashMap<>();
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_MOVIES;
                         break;
-                    case R.id.nav_notifications:
+                    case R.id.nav_logout:
                         navItemIndex = 3;
-                        CURRENT_TAG = TAG_NOTIFICATIONS;
+                        CURRENT_TAG = TAG_Logout;
                         break;
-                    case R.id.nav_settings:
-                        navItemIndex = 4;
-                        CURRENT_TAG = TAG_SETTINGS;
-                        break;
-                    case R.id.nav_about_us:
-                        // launch new intent instead of loading fragment
-//                        startActivity(new Intent(MainActivity1.this, AboutUsActivity.class));
-                        drawer.closeDrawers();
-                        return true;
-                    case R.id.nav_privacy_policy:
-                        // launch new intent instead of loading fragment
-//                        startActivity(new Intent(MainActivity1.this, PrivacyPolicyActivity.class));
-                        drawer.closeDrawers();
-                        return true;
+//                    case R.id.nav_settings:
+//                        navItemIndex = 4;
+//                        CURRENT_TAG = TAG_SETTINGS;
+//                        break;
+//                    case R.id.nav_about_us:
+//                        // launch new intent instead of loading fragment
+////                        startActivity(new Intent(MainActivity1.this, AboutUsActivity.class));
+//                        drawer.closeDrawers();
+//                        return true;
+//                    case R.id.nav_privacy_policy:
+//                        // launch new intent instead of loading fragment
+////                        startActivity(new Intent(MainActivity1.this, PrivacyPolicyActivity.class));
+//                        drawer.closeDrawers();
+//                        return true;
                     default:
                         navItemIndex = 0;
                 }
@@ -579,7 +581,9 @@ hashMap = new HashMap<>();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
-            Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), SignIn.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 

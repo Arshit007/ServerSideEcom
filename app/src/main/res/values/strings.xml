@@ -21,7 +21,7 @@
     <string name="nav_home">Home</string>
     <string name="nav_photos">All User</string>
     <string name="nav_movies">All Order</string>
-    <string name="nav_notifications">Notifications</string>
+    <string name="nav_logout">Logout</string>
     <string name="nav_settings">Settings</string>
     <string name="nav_about_us">About Us</string>
 
